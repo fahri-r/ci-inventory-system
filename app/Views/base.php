@@ -8,14 +8,14 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/iconly/bold.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/iconly/bold.css') ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/bootstrap-icons/bootstrap-icons.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/app.css') ?>">
-    <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.svg') ?>" type="image/x-icon">
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/bootstrap-icons/bootstrap-icons.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
+    <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.svg') ?>" type="image/x-icon">
 
     <?= $this->renderSection('header') ?>
 </head>
@@ -27,7 +27,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="<?php echo base_url('assets/images/logo/logo.png') ?>" alt="Logo" srcset=""></a>
+                            <a href="index.html"><img src="<?= base_url('assets/images/logo/logo.png') ?>" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -38,7 +38,7 @@
                     <ul class="menu">
 
                         <li class="sidebar-item">
-                            <a href="<?php echo base_url('/') ?>" class='sidebar-link'>
+                            <a href="<?= base_url('/') ?>" class='sidebar-link'>
                                 <i class="bi bi-speedometer"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -51,10 +51,10 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/users/create') ?>">Add User</a>
+                                    <a href="<?= base_url('/users/new') ?>">Add User</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/users') ?>">Manage Users</a>
+                                    <a href="<?= base_url('/users') ?>">Manage Users</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,34 +66,61 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/groups/create') ?>">Add Group</a>
+                                    <a href="<?= base_url('/groups/new') ?>">Add Group</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/groups') ?>">Manage Groups</a>
+                                    <a href="<?= base_url('/groups') ?>">Manage Groups</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-files"></i>
+                                <span>Brands</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/brands/new') ?>">Add Brand</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/brands') ?>">Manage Brands</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-files"></i>
+                                <span>Categories</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/categories/new') ?>">Add Category</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/categories') ?>">Manage Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-files"></i>
+                                <span>Stores</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/stores/new') ?>">Add Store</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="<?= base_url('/stores') ?>">Manage Stores</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="<?php echo base_url('/brands') ?>" class='sidebar-link'>
-                                <i class="bi bi-files"></i>
-                                <span>Brands</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?php echo base_url('/categories') ?>" class='sidebar-link'>
-                                <i class="bi bi-files"></i>
-                                <span>Categories</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?php echo base_url('/stores') ?>" class='sidebar-link'>
-                                <i class="bi bi-files"></i>
-                                <span>Stores</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?php echo base_url('/attributes') ?>" class='sidebar-link'>
+                            <a href="<?= base_url('/attributes') ?>" class='sidebar-link'>
                                 <i class="bi bi-files"></i>
                                 <span>Attributes</span>
                             </a>
@@ -105,10 +132,10 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/users/create') ?>">Add Product</a>
+                                    <a href="<?= base_url('/users/new') ?>">Add Product</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/products') ?>">Manage Products</a>
+                                    <a href="<?= base_url('/products') ?>">Manage Products</a>
                                 </li>
                             </ul>
                         </li>
@@ -119,30 +146,30 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/users/create') ?>">Add Order</a>
+                                    <a href="<?= base_url('/users/new') ?>">Add Order</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="<?php echo base_url('/orders') ?>">Manage Orders</a>
+                                    <a href="<?= base_url('/orders') ?>">Manage Orders</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="<?php echo base_url('/company') ?>" class='sidebar-link'>
+                            <a href="<?= base_url('/company') ?>" class='sidebar-link'>
                                 <i class="bi bi-building"></i>
                                 <span>Company</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="<?php echo base_url('/users/profile') ?>" class='sidebar-link'>
+                            <a href="<?= base_url('/users/profile') ?>" class='sidebar-link'>
                                 <i class="bi bi-person-fill"></i>
                                 <span>Profile</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="<?php echo base_url('/users/create') ?>" class='sidebar-link'>
+                            <a href="<?= base_url('/users/create') ?>" class='sidebar-link'>
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Logout</span>
                             </a>
@@ -157,15 +184,15 @@
         <?= $this->renderSection('content') ?>
 
     </div>
-    <script src="<?php echo base_url('assets/js/jquery-3.6.0.js') ?>"></script>
-    
-    <script src="<?php echo base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
-    
-    <script src="<?php echo base_url('assets/js/mazer.js') ?>"></script>
-    
+    <script src="<?= base_url('assets/js/jquery-3.6.0.js') ?>"></script>
+
+    <script src="<?= base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
+
+    <script src="<?= base_url('assets/js/mazer.js') ?>"></script>
+
     <?= $this->renderSection('footer') ?>
-    
+
     <script>
         var url = window.location
         $('.sidebar-item a').each(function(e) {
