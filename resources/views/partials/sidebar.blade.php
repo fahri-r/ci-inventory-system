@@ -35,19 +35,11 @@
                     </ul>
                 </li>
 
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
+                <li class="sidebar-item">
+                    <a href="{{ route('groups.index') }}" class='sidebar-link'>
                         <i class="fas fa-th-large"></i>
                         <span>Groups</span>
                     </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="/groups/new">Add Group</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="/groups">Manage Groups</a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="sidebar-item">
