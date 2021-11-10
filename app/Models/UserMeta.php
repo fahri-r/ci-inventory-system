@@ -5,21 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Group extends Model
+class UserMeta extends Model
 {
     use HasFactory;
     
-    protected $table = 'groups';
+    protected $table = 'user_metas';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $fillable = [
-        'name',
-        'permission',
+        'firstname',
+        'lastname',
+        'gender',
+        'phone',
     ];
     public $timestamps = true;
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

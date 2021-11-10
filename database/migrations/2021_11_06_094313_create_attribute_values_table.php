@@ -29,7 +29,7 @@ class CreateAttributeValuesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('attribute_values', function (Blueprint $table) {
-            $table->dropForeign('posts_user_id_foreign');
+            $table->dropForeign('attribute_values_attribute_id_foreign');
         });
     }
 }

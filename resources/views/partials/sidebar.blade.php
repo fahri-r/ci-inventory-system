@@ -20,19 +20,11 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
+                <li class="sidebar-item">
+                    <a href="{{ route('users.index') }}" class='sidebar-link'>
                         <i class="fas fa-users"></i>
                         <span>Users</span>
                     </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="/users/new">Add User</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="/users">Manage Users</a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="sidebar-item">
