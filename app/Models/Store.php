@@ -17,4 +17,9 @@ class Store extends Model
         'active',
     ];
     public $timestamps = true;
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

@@ -61,35 +61,21 @@
                         <span>Attributes</span>
                     </a>
                 </li>
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
+
+                <li class="sidebar-item">
+                    <a href="{{ route('products.index') }}" class='sidebar-link'>
                         <i class="fas fa-box"></i>
                         <span>Products</span>
                     </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="/users/new">Add Product</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="/products">Manage Products</a>
-                        </li>
-                    </ul>
                 </li>
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
+
+                <li class="sidebar-item">
+                    <a href="{{ route('orders.index') }}" class='sidebar-link'>
                         <i class="fas fa-dollar-sign"></i>
                         <span>Orders</span>
                     </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="/users/new">Add Order</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="/orders">Manage Orders</a>
-                        </li>
-                    </ul>
                 </li>
-
+                
                 <li class="sidebar-item">
                     <a href="/company" class='sidebar-link'>
                         <i class="fas fa-building"></i>
